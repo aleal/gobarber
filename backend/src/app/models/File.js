@@ -19,9 +19,6 @@ class File extends Model {
     );
     return this;
   }
-  static associate(models) {
-    this.belongsTo(models.User, { as: 'avatar', foreignKey: 'user_id' });
-  }
 }
 
 export default File;
