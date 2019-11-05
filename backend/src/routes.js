@@ -10,6 +10,7 @@ import multerConfig from './config/multer';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
 import NotificationController from './app/controllers/NotificationController';
+import AvailableController from './app/controllers/AvailableController';
 
 const routes = new Router();
 
@@ -27,4 +28,5 @@ routes.delete('/appointments/:id', AppointmentController.delete);
 routes.get('/schedules', ScheduleController.index);
 routes.get('/notifications', NotificationController.index);
 routes.put('/notifications/:id', NotificationController.update);
+routes.get('/providers/:id/available', AvailableController.index);
 export default routes;
